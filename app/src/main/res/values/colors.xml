@@ -6,4 +6,5 @@
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#fff</color>
     <color name="colorGrey">#303030</color>
+    <color name="profile_default_tint">#e0e0e0</color>
 </resources>

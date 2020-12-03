@@ -5,41 +5,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".MainMenuActivity">
 
     <ImageView
         android:id="@+id/ivMenu"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:background="@mipmap/login_bg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="231dp"
-        android:src="@mipmap/login_bg"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
-        android:id="@+id/tvView"
-        app:layout_constraintTop_toBottomOf="@+id/ivMenu"
+        android:id="@+id/tvLogo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click menu to continue"
+        android:text="Bajawa Coffee"
         android:textStyle="bold"
-        android:layout_marginLeft="15dp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textSize="30dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tvLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="and Gallery"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:fontFamily="cursive"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorWhite"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ivMenu"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Click menu to continue"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:textColor="@color/colorPrimaryDark"/>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clsatu"
-        app:layout_constraintTop_toBottomOf="@+id/tvView"
+        app:layout_constraintTop_toBottomOf="@+id/ivMenu"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp">
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdInput"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_width="280dp"
+            app:cardUseCompatPadding="true"
             app:cardCornerRadius="8dp"
             android:layout_height="100dp">
             <LinearLayout
@@ -53,8 +81,8 @@
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="30dp"/>
                 <View
                     android:layout_width="2dp"
                     android:layout_height="wrap_content"
@@ -62,7 +90,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/laptop"
+                    android:src="@mipmap/confirmation"
                     android:padding="25dp"/>
             </LinearLayout>
 
@@ -77,11 +105,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdTransaksi"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_width="280dp"
             app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true"
             android:layout_height="100dp">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -103,7 +133,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/copywriting"
+                    android:src="@mipmap/accessibility"
                     android:padding="25dp"/>
             </LinearLayout>
 
@@ -115,15 +145,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="match_parent"
+        android:padding="3dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdDownload"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_width="280dp"
             app:cardCornerRadius="8dp"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +177,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/download"
+                    android:src="@mipmap/down"
                     android:padding="25dp"/>
             </LinearLayout>
 

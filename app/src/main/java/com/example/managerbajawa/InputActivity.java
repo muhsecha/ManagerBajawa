@@ -61,6 +61,13 @@ public class InputActivity extends AppCompatActivity {
 
         loadProfileDefault();
 
+        btnimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onProfileImageClick();
+            }
+        });
+
         // Clearing older images from cache directory
         // don't call this line if you want to choose multiple images in the same activity
         // call this once the bitmap(s) usage is over
@@ -68,7 +75,7 @@ public class InputActivity extends AppCompatActivity {
     }
 
     private void loadProfile(String url) {
-        Log.d(TAG, "Image cache path: " + url);
+        Log.d("check", "Image cache path: " + url);
 
         Glide.with(this).load(url)
                 .into(ivimage);
@@ -81,8 +88,9 @@ public class InputActivity extends AppCompatActivity {
         ivimage.setColorFilter(ContextCompat.getColor(this, R.color.profile_default_tint));
     }
 
-    @OnClick({R.id.ivImage, R.id.btnImage})
+
     void onProfileImageClick() {
+        Log.d("masuk", "masuk ");
         Dexter.withActivity(this)
                 .withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
